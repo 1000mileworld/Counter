@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {createStore} from 'redux'; //need braces due to redux not containing default export
+
+function reducer(state, action){
+    console.log('reducer',state,action);
+    return state;
+}
+const store = createStore(reducer);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
